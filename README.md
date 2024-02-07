@@ -8,11 +8,12 @@ To run this script, you need Python installed on your machine along with the `py
 
 ```bash
 pip install pyautogui keyboard
-```
+
 
 How to Use
 Run the script.
 You have 3 seconds before the script begins to automatically press and hold the "F" key.
+Stopping the script:
 To stop the script and release the "F" key, press the "G" key.
 If you need to stop the script manually for any reason, you can do so by interrupting the script execution (e.g., pressing Ctrl+C in the terminal).
 Note

@@ -2,22 +2,22 @@ import pyautogui
 import keyboard
 import time
 
-# Esperar 3 segundos antes de comenzar a pulsar la tecla "F"
+# Wait 3 seconds before starting to press the "F" key
 time.sleep(3)
 
-print("Manteniendo 'F' presionada. Presiona 'G' para detener.")
+print("Holding 'F' pressed. Press 'G' to stop.")
 
-def mantener_f_presionada():
-    pyautogui.keyDown('f')  # Presiona y mantiene "F" sin soltar
+def hold_f_pressed():
+    pyautogui.keyDown('f')  # Press and hold "F" without releasing
     while True:
-        if keyboard.is_pressed('g'):  # Si se presiona "G", soltar "F"
-            pyautogui.keyUp('f')  # Suelta la tecla "F"
-            print("Detenido.")
+        if keyboard.is_pressed('g'):  # If "G" is pressed, release "F"
+            pyautogui.keyUp('f')  # Release the "F" key
+            print("Stopped.")
             break
-        time.sleep(0.1)  # Este sleep es para no saturar el ciclo con la verificación
+        time.sleep(0.1)  # This sleep is to not overload the loop with the check
 
 try:
-    mantener_f_presionada()
+    hold_f_pressed()
 except KeyboardInterrupt:
-    pyautogui.keyUp('f')  # Asegurarse de que la tecla "F" se suelte si se detiene el script
-    print("Script detenido manualmente.")
+    pyautogui.keyUp('f')  # Ensure the "F" key is released if the script is manually stopped
+    print("Script manually stopped.")
